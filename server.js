@@ -7,9 +7,11 @@ const anchor = express();
 editor.use(express.static(__dirname+'/editor/build'));
 sailor.use(express.static(__dirname+'/sailor/build'));
 anchor.use(express.static(__dirname+'/anchor/build/web'));
+buoyr.use(express.static(__dirname+'/buoyr/build/web'));
 
-buoyr.get('/', (req, res) => {
-    res.send('Hello there, BuoyrTech!');
+
+buoyr.get('*', (req, res) => {
+    res.sendFile(__dirname+'/buoyr/build/web/'+'index.html');
 });
 
 editor.get('*', (req, res) => {
