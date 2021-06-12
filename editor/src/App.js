@@ -10,7 +10,7 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/:userId/:projectId">
+        <Route exact path="/:lang/:userId/:projectId">
           <Editor />
         </Route>
         <Route path="/">
