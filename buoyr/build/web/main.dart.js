@@ -34289,7 +34289,7 @@ WW:function(){var s=$.aUt,r=H.af(s).j("aa<1,jP>")
 return P.ai(new H.aa(s,new V.a1G(),r),!0,r.j("aH.E"))},
 W:function(a,b){var s,r,q=null,p=$.auA()
 $.aoT().toString
-p=T.HC(new T.kp(C.lX,q,q,new G.Kc(45,new D.HA("assets/svg/logo.svg",q,q,p,q),q,q),q),1)
+p=T.HC(new T.kp(C.lX,q,q,new G.Kc(45,new D.HA("svg/logo.svg",q,q,p,q),q,q),q),1)
 s=P.ai(this.WW(),!0,t.cl)
 s.push(new Z.DQ("Apply now",q))
 r=t.p
@@ -62534,9 +62534,9 @@ $.Lj=P.A(t.N,t.BO)
 $.ajh=null
 $.a_s=null
 $.aUt=H.e(["Home","How It Works","Our Partners","Tuition"],t.s)
-$.akC=P.c(["title","Land your dream job in 10 weeks.","subtitle","For beginners and with no work experience.","description","Learn the fundamentals of programming, select a career track of your own, and work with our partner companies!","image","assets/images/hero.jpg"],t.N,t.z)
+$.akC=P.c(["title","Land your dream job in 10 weeks.","subtitle","For beginners and with no work experience.","description","Learn the fundamentals of programming, select a career track of your own, and work with our partner companies!","image","images/hero.jpg"],t.N,t.z)
 $.aUz=function(){var s=t.N,r=t.z
-return H.e([P.c(["title","Hello, World!","subtitle","Week 0 - 4","description","Learn the fundamentals of programming, basic algorithms, and data structures. This will help you to learn advance lessons when you are ready to select a career track of your own.","image","assets/images/hello-world.jpg"],s,r),P.c(["title","Choose a track","subtitle","Week 5 - 10","description","Choose a career track of your own such as frontend web development, ui/ux design, and project management.","image","assets/images/track.jpg"],s,r),P.c(["title","Land your dream job","subtitle","Career Placement","description","As you learn, we will guide you in finding your dream job. We offer mentorship as part of the package. After you graduate, you will have the chance to work with our partner companies.","image","assets/images/job.jpg"],s,r)],H.a1("y<a9<n,@>>"))}()
+return H.e([P.c(["title","Hello, World!","subtitle","Week 0 - 4","description","Learn the fundamentals of programming, basic algorithms, and data structures. This will help you to learn advance lessons when you are ready to select a career track of your own.","image","images/hello-world.jpg"],s,r),P.c(["title","Choose a track","subtitle","Week 5 - 10","description","Choose a career track of your own such as frontend web development, ui/ux design, and project management.","image","images/track.jpg"],s,r),P.c(["title","Land your dream job","subtitle","Career Placement","description","As you learn, we will guide you in finding your dream job. We offer mentorship as part of the package. After you graduate, you will have the chance to work with our partner companies.","image","images/job.jpg"],s,r)],H.a1("y<a9<n,@>>"))}()
 $.aVd=function(){var s=t.N,r=t.z
 return H.e([P.c(["title","One-Time Payment","subtitle","PHP 20,000","description","Includes mentorship program, modules, and career placement."],s,r),P.c(["title","Study Now, Pay Later","subtitle","5% of your monthly salary","description","Once hired, pay 15% of your monthly salary until paid."],s,r)],H.a1("y<a9<n,@>>"))}()
 $.axH=H.e([],H.a1("y<p<c0>(p<c0>)>"))

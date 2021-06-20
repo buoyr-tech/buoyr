@@ -72,7 +72,7 @@ class CustomAppBar extends StatelessWidget {
             children: [
               Expanded(
                 child: Align(
-                  child: SvgPicture.asset('assets/svg/logo.svg', height: 45.0,),
+                  child: SvgPicture.asset('svg/logo.svg', height: 45.0,),
                   alignment: Alignment.centerLeft,
                 ),
               ),

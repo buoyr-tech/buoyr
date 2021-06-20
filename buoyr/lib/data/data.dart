@@ -10,7 +10,7 @@ Map<String, dynamic> hero = {
   'subtitle': 'For beginners and with no work experience.',
   'description':
       'Learn the fundamentals of programming, select a career track of your own, and work with our partner companies!',
-  'image': 'assets/images/hero.jpg',
+  'image': 'images/hero.jpg',
 };
 
 List<Map<String, dynamic>> mainData = [
@@ -19,21 +19,21 @@ List<Map<String, dynamic>> mainData = [
     'subtitle': 'Week 0 - 4',
     'description':
         'Learn the fundamentals of programming, basic algorithms, and data structures. This will help you to learn advance lessons when you are ready to select a career track of your own.',
-      'image': 'assets/images/hello-world.jpg',
+      'image': 'images/hello-world.jpg',
   },
   {
     'title': 'Choose a track',
     'subtitle': 'Week 5 - 10',
     'description':
         'Choose a career track of your own such as frontend web development, ui/ux design, and project management.',
-        'image': 'assets/images/track.jpg',
+        'image': 'images/track.jpg',
   },
   {
     'title': 'Land your dream job',
     'subtitle': 'Career Placement',
     'description':
         'As you learn, we will guide you in finding your dream job. We offer mentorship as part of the package. After you graduate, you will have the chance to work with our partner companies.',
-        'image': 'assets/images/job.jpg',
+        'image': 'images/job.jpg',
   },
 ];
 
