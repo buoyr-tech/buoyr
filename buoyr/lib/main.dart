@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Buoyr Technologies',
+    title: 'Land your dream job in 10 weeks. | Buoyr Technologies',
     debugShowCheckedModeBanner: false,
     home: HomeScreen(),
   ));

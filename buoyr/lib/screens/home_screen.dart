@@ -1,19 +1,22 @@
 import 'package:buoyr/components/button.dart';
 import 'package:buoyr/components/section_card.dart';
+import 'package:buoyr/data/data.dart';
 import 'package:buoyr/ui/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+final color = CustomTheme().color;
+final typography = CustomTheme().typography;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final color = CustomTheme().color;
     return Scaffold(
       backgroundColor: color.primaryColor,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(75.0),
+        preferredSize: Size.fromHeight(100.0),
         child: CustomAppBar(),
       ),
       body: SingleChildScrollView(
@@ -51,31 +54,33 @@ class HomeScreen extends StatelessWidget {
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
 
+  List<SelectableText> buildLinks() {
+    return links.map((link) {
+      return SelectableText(link, style: typography.link);
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final typography = CustomTheme().typography;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
+          padding: const EdgeInsets.symmetric(vertical: 25.0),
           width: 1080,
           child: Row(
             children: [
               Expanded(
                 child: Align(
-                  child: FlutterLogo(size: 65.0),
+                  child: SvgPicture.asset('assets/svg/logo.svg', height: 45.0,),
                   alignment: Alignment.centerLeft,
                 ),
               ),
               Expanded(
+                flex: 2,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SelectableText('Home', style: typography.link),
-                    SelectableText('How It Works', style: typography.link),
-                    SelectableText('Our Partners', style: typography.link),
-                    SelectableText('Tuition', style: typography.link),
-                  ],
+                  children: [...buildLinks(), CustomButton(text: 'Apply now')],
                 ),
               )
             ],
@@ -91,7 +96,6 @@ class CustomHero extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final typography = CustomTheme().typography;
     return Container(
       height: 300.0,
       child: Row(
@@ -101,23 +105,17 @@ class CustomHero extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                SelectableText(hero['title'], style: typography.headline1),
+                SelectableText(hero['subtitle'], style: typography.subtitle1),
                 SelectableText(
-                  'Land your dream job in 3 months.',
-                  style: typography.headline1,
-                ),
-                SelectableText(
-                  'For beginners and with no work experience.',
-                  style: typography.subtitle1,
-                ),
-                SelectableText(
-                  'Learn the fundamentals of programming, select a career track of your own, and work with our partner companies!',
+                  hero['description'],
                   style: typography.bodyText1,
                 ),
                 CustomButton(text: 'Apply now')
               ],
             ),
           ),
-          Expanded(child: FlutterLogo(size: 300.0)),
+          Expanded(child: Image.asset(hero['image'])),
         ],
       ),
     );
@@ -127,86 +125,45 @@ class CustomHero extends StatelessWidget {
 class CustomMain extends StatelessWidget {
   const CustomMain({Key? key}) : super(key: key);
 
+  List<Row> buildMainItem() {
+    return mainData.map((item) {
+      return Row(
+        children: [
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SelectableText(item['title'], style: typography.headline3),
+                SizedBox(height: 10.0),
+                SelectableText(item['subtitle'], style: typography.subtitle2),
+                SizedBox(height: 10.0),
+                SelectableText(item['description'],
+                    style: typography.bodyText1),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Align(
+              child: Image.asset(item['image']),
+              alignment: Alignment.centerRight,
+            ),
+          ),
+        ],
+      );
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     final typography = CustomTheme().typography;
     return Container(
-      height: 700.0,
+      height: 1000.0,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SelectableText(
-            'This is how it works.',
-            style: typography.headline2,
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SelectableText('Hello, World!',
-                        style: typography.headline3),
-                    SelectableText('Week 0 - 4', style: typography.subtitle2),
-                    SelectableText(
-                        'Learn the fundamentals of programming, basic algorithms, and data structures. This will help you to learn advance lessons when you are ready to select a career track of your own.',
-                        style: typography.bodyText1),
-                  ],
-                ),
-              ),
-              Expanded(
-                  child: Align(
-                child: FlutterLogo(size: 80.0),
-                alignment: Alignment.centerRight,
-              ))
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SelectableText('Choose a track',
-                        style: typography.headline3),
-                    SelectableText('Week 5 - 10', style: typography.subtitle2),
-                    SelectableText(
-                        'Choose a career track of your own such as frontend web development, ui/ux design, and project management.',
-                        style: typography.bodyText1),
-                  ],
-                ),
-              ),
-              Expanded(
-                  child: Align(
-                child: FlutterLogo(size: 80.0),
-                alignment: Alignment.centerRight,
-              ))
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SelectableText('Land your dream job',
-                        style: typography.headline3),
-                    SelectableText(
-                        'As you learn, we will guide you in finding your dream job. We offer mentorship as part of the package. After you graduate, you will have the chance to work with our partner companies.',
-                        style: typography.bodyText1),
-                  ],
-                ),
-              ),
-              Expanded(
-                  child: Align(
-                child: FlutterLogo(size: 80.0),
-                alignment: Alignment.centerRight,
-              ))
-            ],
-          ),
+          SelectableText('This is how it works.', style: typography.headline2),
+          ...buildMainItem(),
         ],
       ),
     );
@@ -239,38 +196,28 @@ class CustomAside extends StatelessWidget {
 class CustomSection extends StatelessWidget {
   const CustomSection({Key? key}) : super(key: key);
 
+  List<SectionCard> buildSectionCards() {
+    return section.map((item) {
+      return SectionCard(
+        cardTitle: item['title'],
+        cardHighlight: item['subtitle'],
+        cardDescription: item['description'],
+        cardAction: CustomButton(text: 'Apply now'),
+      );
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     final typography = CustomTheme().typography;
     return Column(
       children: [
-        SelectableText(
-          'Tuition Options',
-          style: typography.headline2,
-        ),
-        SelectableText(
-          'Your future starts now.',
-          style: typography.subtitle1,
-        ),
+        SelectableText('Tuition', style: typography.headline2),
+        SelectableText('Your future starts now.', style: typography.subtitle1),
         SizedBox(height: 50.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SectionCard(
-              cardTitle: 'All-In Package',
-              cardHighlight: 'PHP 20,000',
-              cardDescription:
-                  'Includes mentorship program, modules, and career placement. ',
-              cardAction: CustomButton(text: 'Apply now'),
-            ),
-            SectionCard(
-              cardTitle: 'Scholarship',
-              cardHighlight: '15% of your salary',
-              cardDescription:
-                  'Once hired, pay 15% of your monthly salary for one year.',
-              cardAction: CustomButton(text: 'Apply now'),
-            ),
-          ],
+          children: buildSectionCards(),
         )
       ],
     );
