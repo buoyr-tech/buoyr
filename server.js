@@ -1,11 +1,11 @@
 const express = require('express');
 const buoyr = express();
 const editor = express();
-const sailor = express();
+const makeWaves = express();
 const anchor = express();
 
 editor.use(express.static(__dirname+'/editor/build'));
-sailor.use(express.static(__dirname+'/sailor/build'));
+makeWaves.use(express.static(__dirname+'/makeWaves/build'));
 anchor.use(express.static(__dirname+'/anchor/build/web'));
 buoyr.use(express.static(__dirname+'/buoyr/build/web'));
 
@@ -18,8 +18,8 @@ editor.get('*', (req, res) => {
     res.sendFile(__dirname+'/editor/build/'+'index.html');
 });
 
-sailor.get('*', (req, res) => {
-    res.sendFile(__dirname+'/sailor/build/'+'index.html');
+makeWaves.get('*', (req, res) => {
+    res.sendFile(__dirname+'/makeWaves/build/'+'index.html');
 });
 
 anchor.get('*', (req, res) => {
@@ -29,5 +29,5 @@ anchor.get('*', (req, res) => {
 
 buoyr.listen(8080);
 editor.listen(8081);
-sailor.listen(8082);
+makeWaves.listen(8082);
 anchor.listen(8083);
