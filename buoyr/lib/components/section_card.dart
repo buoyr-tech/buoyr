@@ -26,7 +26,6 @@ class SectionCard extends StatelessWidget {
       ),
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       height: 300.0,
-      width: 450.0,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -38,6 +37,7 @@ class SectionCard extends StatelessWidget {
               color: color.secondaryColor,
               fontWeight: FontWeight.w400,
             ),
+            textAlign: TextAlign.center,
           ),
           SelectableText(
             cardHighlight,
