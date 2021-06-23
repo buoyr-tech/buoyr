@@ -5,17 +5,19 @@ class Editor extends StatelessWidget {
   final String lang;
   final String userId;
   final String projectId;
+  final String theme;
   const Editor({
     Key? key,
     required this.lang,
     required this.userId,
     required this.projectId,
+    required this.theme,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final String src =
-        'https://editor.buoyr.com/$lang/$userId/$projectId/editor/';
+        'https://editor.buoyr.com/$lang/$userId/$projectId/$theme/editor/';
     // final String src = 'http://localhost:3000/$lang/$userId/$projectId/editor';
     final ValueKey editorKey = ValueKey('editor');
     return EasyWebView(
