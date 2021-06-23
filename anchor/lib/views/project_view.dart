@@ -44,7 +44,7 @@ class _ProjectViewState extends State<ProjectView> {
             icon: Icon(Icons.light_mode),
           ),
           IconButton(
-            onPressed: () => launch('https://anchor.buoyr.com/#/$userId/$projectId/share/'),
+            onPressed: () => launch('https://anchor.buoyr.com/#/$userId/$projectId/share'),
             icon: Icon(Icons.share),
           ),
         ],
