@@ -29986,7 +29986,7 @@ return s.e=!s.e},
 $S:0}
 M.Yc.prototype={
 $0:function(){var s=this.a
-return T.a_Z("https://anchor.buoyr.com/#/"+s.gxG()+"/"+s.gxb()+"/share/")},
+return T.a_Z("https://anchor.buoyr.com/#/"+s.gxG()+"/"+s.gxb()+"/share")},
 $C:"$0",
 $R:0,
 $S:0}
