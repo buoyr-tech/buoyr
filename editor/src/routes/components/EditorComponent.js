@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-html";
-import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/theme-tomorrow";
+import "ace-builds/src-noconflict/theme-twilight";
 import "ace-builds/src-noconflict/ext-language_tools";
 import { useParams } from 'react-router-dom';
 import { firestore } from '../../services/firebase';
@@ -10,8 +11,9 @@ import { Wave } from 'better-react-spinkit';
 
 export default function EditorComponent({ lang }) {
     const [loading, setLoading] = useState(true);
+    const [isDark, setIsDark] = useState(true);
+    const { userId, projectId, theme }= useParams();
     const [data, setData] = useState({});
-    const { userId, projectId }= useParams();
 
     const editorOptions = {
         enableBasicAutocompletion: true,
@@ -47,6 +49,7 @@ export default function EditorComponent({ lang }) {
                 if (doc) {
                     setData(doc.data());
                     setLoading(false);
+                    setIsDark(theme == 'dark' ? true : false);
                 }
             });
             
@@ -60,7 +63,7 @@ export default function EditorComponent({ lang }) {
         <AceEditor
         value={lang == 'html' ? data.html : data.css}
         mode={lang == 'html' ? 'html' : 'css'}
-        theme="monokai"
+        theme={isDark ? 'twilight' : 'tomorrow'}
         onChange={ onChange }
         name={ projectId }
         setOptions={ editorOptions }

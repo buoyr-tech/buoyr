@@ -13,7 +13,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path="/:userId/:projectId/preview" component={Preview} />
-        <Route exact path="/:lang/:userId/:projectId/editor" component={Editor} />
+        <Route exact path="/:lang/:userId/:projectId/:theme/editor" component={Editor} />
         <Route exact path="/:userName/:projectSlug/" component={Share} />
         <Route path="/" component={Home} />
       </Switch>
