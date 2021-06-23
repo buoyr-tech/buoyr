@@ -1,6 +1,7 @@
 import 'package:anchor/components/editor.dart';
 import 'package:anchor/components/preview.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectView extends StatefulWidget {
   final String userId;
@@ -31,6 +32,7 @@ class _ProjectViewState extends State<ProjectView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // TODO: UI from Mockups
       appBar: AppBar(
         actions: [
           IconButton(
@@ -40,6 +42,10 @@ class _ProjectViewState extends State<ProjectView> {
           IconButton(
             onPressed: () => setState(() => isDark = !isDark),
             icon: Icon(Icons.light_mode),
+          ),
+          IconButton(
+            onPressed: () => launch('https://anchor.buoyr.com/#/$userId/$projectId/share/'),
+            icon: Icon(Icons.share),
           ),
         ],
       ),

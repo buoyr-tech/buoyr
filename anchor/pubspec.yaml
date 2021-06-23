@@ -16,6 +16,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   easy_web_view2: ^0.0.3
   google_fonts: ^2.1.0
+  url_launcher: ^6.0.7
 
 dev_dependencies:
   flutter_test:

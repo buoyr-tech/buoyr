@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:anchor/views/home_view.dart';
 import 'package:anchor/views/not_found_view.dart';
 import 'package:anchor/views/project_view.dart';
@@ -21,7 +19,7 @@ void main() {
       if (uri.pathSegments.length == 3) {
         return MaterialPageRoute(builder: (context) {
           // /:userId/:projectId/project
-          if (uri.pathSegments.last == 'project') {
+          if (uri.pathSegments.last == 'play') {
             return ProjectView(
               userId: uri.pathSegments[0],
               projectId: uri.pathSegments[1],
@@ -37,6 +35,7 @@ void main() {
           }
         });
       }
+      // 404
       return MaterialPageRoute(builder: (context) => NotFoundView());
     },
   ));
