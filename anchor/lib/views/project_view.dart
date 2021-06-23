@@ -3,7 +3,13 @@ import 'package:anchor/components/preview.dart';
 import 'package:flutter/material.dart';
 
 class ProjectView extends StatefulWidget {
-  const ProjectView({Key? key}) : super(key: key);
+  final String userId;
+  final String projectId;
+  const ProjectView({
+    Key? key,
+    required this.userId,
+    required this.projectId,
+  }) : super(key: key);
 
   @override
   _ProjectViewState createState() => _ProjectViewState();
@@ -12,6 +18,15 @@ class ProjectView extends StatefulWidget {
 class _ProjectViewState extends State<ProjectView> {
   bool isHtml = true;
   bool isDark = true;
+  late String userId;
+  late String projectId;
+
+  @override
+  void initState() {
+    super.initState();
+    userId = widget.userId;
+    projectId = widget.projectId;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +49,12 @@ class _ProjectViewState extends State<ProjectView> {
             Expanded(
               child: Editor(
                 lang: isHtml ? 'html' : 'css',
-                userId: '1',
+                userId: userId,
                 theme: isDark ? 'dark' : 'light',
-                projectId: '1',
+                projectId: projectId,
               ),
             ),
-            Expanded(child: Preview(userId: '1', projectId: '1')),
+            Expanded(child: Preview(userId: userId, projectId: projectId)),
           ],
         ),
       ),
