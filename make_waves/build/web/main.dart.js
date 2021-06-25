@@ -12654,7 +12654,7 @@ p=H.h([],t.Jh)
 o=P.bU(7,null,!1,t.JI)
 n=t.j1
 new N.Yg(null,m,!0,new P.aH(new P.a7(l,t.W),t.gR),!1,null,!1,!1,null,$,null,!1,0,!1,$,null,new N.a2E(P.bq(t.M)),$,$,p,null,N.aMN(),new Y.Tm(N.aMM(),o,t.G7),!1,0,P.C(q,t.h1),P.bk(q),H.h([],n),H.h([],n),null,!1,C.bX,!0,!1,null,C.J,C.J,null,0,null,!1,P.hj(null,t.qL),new O.adC(P.C(q,t.rr),P.C(t.Ld,t.iD)),new D.a9x(P.C(q,t.cK)),new G.adF(),P.C(q,t.Fn),$,!1,C.tA).SP()}m=$.F
-m.Om(new S.L5(new V.Kn(null),"Make Waves | 2021",!1,null))
+m.Om(new S.L5(new V.Kn(null),"Making an impact through code and design. | Make Waves 2021",!1,null))
 m.D1()
 return P.S(null,r)}})
 return P.T($async$asv,r)}},Z={oE:function oE(){},t6:function t6(){},oQ:function oQ(){},a8N:function a8N(){},LA:function LA(){},h7:function h7(){},OG:function OG(){},fw:function fw(a,b,c){this.a=a
