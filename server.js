@@ -5,7 +5,7 @@ const makeWaves = express();
 const anchor = express();
 
 editor.use(express.static(__dirname+'/editor/build'));
-makeWaves.use(express.static(__dirname+'/makeWaves/build'));
+makeWaves.use(express.static(__dirname+'/make_waves/build/web'));
 anchor.use(express.static(__dirname+'/anchor/build/web'));
 buoyr.use(express.static(__dirname+'/buoyr/build/web'));
 
@@ -19,7 +19,7 @@ editor.get('*', (req, res) => {
 });
 
 makeWaves.get('*', (req, res) => {
-    res.sendFile(__dirname+'/makeWaves/build/'+'index.html');
+    res.sendFile(__dirname+'/make_waves/build/web/'+'index.html');
 });
 
 anchor.get('*', (req, res) => {
