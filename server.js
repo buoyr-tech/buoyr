@@ -29,5 +29,5 @@ anchor.get('*', (req, res) => {
 
 buoyr.listen(8080);
 editor.listen(8081);
-makeWaves.listen(8082);
+makeWaves.listen(8084);
 anchor.listen(8083);
