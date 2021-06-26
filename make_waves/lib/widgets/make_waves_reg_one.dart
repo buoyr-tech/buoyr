@@ -45,13 +45,13 @@ class _MakeWavesRegOneState extends State<MakeWavesRegOne> {
           '1. Create a team of 4 members. It must be composed of ideator/pitcher, developers, and designers. Participants with no coding experience are welcome to join the event.',
           style: theme.body(),
         ),
+        SizedBox(height: 20.0),
         MakeWavesInput(
           controller: widget.teamController,
           type: TextInputType.text,
           label: 'Name of team',
         ),
         SizedBox(height: 20.0),
-        
         Row(
           children: [
             Expanded(

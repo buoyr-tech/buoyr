@@ -30,6 +30,7 @@ class _MakeWavesRegTwoState extends State<MakeWavesRegTwo> {
           '2. In this year’s Make Waves, we have three sectors to feature in our challenges. Ideas must solve problems/issues in Mindanao. Select one and add a short overview of your ideas. You can change it during the event.',
           style: theme.body(),
         ),
+        SizedBox(height: 20.0),
         Row(
           children: [
             Expanded(

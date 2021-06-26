@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../exports.dart';
-import 'package:video_player/video_player.dart';
 
 class MakeWavesHero extends StatefulWidget {
   const MakeWavesHero({Key? key}) : super(key: key);
@@ -10,19 +9,8 @@ class MakeWavesHero extends StatefulWidget {
 }
 
 class _MakeWavesHeroState extends State<MakeWavesHero> {
-  late VideoPlayerController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller =
-        VideoPlayerController.asset('media/make-waves-2021-official.mp4')
-          ..initialize();
-  }
-
   @override
   Widget build(BuildContext context) {
-    _controller.play();
     return Column(
       children: [
         SelectableText(
@@ -31,10 +19,7 @@ class _MakeWavesHeroState extends State<MakeWavesHero> {
           textAlign: TextAlign.center,
         ),
         SizedBox(height: 25.0),
-        AspectRatio(
-          aspectRatio: 16 / 9,
-          child: VideoPlayer(_controller),
-        ),
+        AspectRatio(aspectRatio: 16 / 9, child: Image.asset('images/hero.png')),
         SizedBox(height: 25.0),
         SelectableText(
           'We believe that in order for us to learn, we should engage ourselves in the tech community.',

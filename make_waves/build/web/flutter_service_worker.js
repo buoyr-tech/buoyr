@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "9a5065b492cb93fcf273cb96e68475b8",
-"index.html": "f1349896efc77676387fe3dee172e316",
-"/": "f1349896efc77676387fe3dee172e316",
-"main.dart.js": "c294685b573ca5b34f4f9910072697ad",
+"index.html": "b50fdda1d791e26389cd9fc09b011737",
+"/": "b50fdda1d791e26389cd9fc09b011737",
+"main.dart.js": "c189a3d88da98c337a7f05a609c7bbc6",
 "script.js": "49d37e4c22618cc7f84e445045f6fd78",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
@@ -14,6 +14,7 @@ const RESOURCES = {
 "manifest.json": "25ef3d87bcfd3c2c7f3c1e460a20c77e",
 "assets/images/invision.png": "213d7130fd1ab52c39e27886af813be0",
 "assets/images/buoyr.png": "bbfb8e76c3eeaf8b4b104738e56afef4",
+"assets/images/hero.png": "411abeaf0434e1826f094f35ed593f64",
 "assets/images/minda.png": "8d4a6a04cb018242a74943625b2bf720",
 "assets/images/atmos.png": "6b50dc2ea72d6e029caf0f6173b498d3",
 "assets/images/seles.png": "246609fe9680f206a1f8403f508cc356",
@@ -31,12 +32,11 @@ const RESOURCES = {
 "assets/images/anchor.png": "3bac2e8d110533d4b1faff8088296ce7",
 "assets/images/merch.png": "49e690165280cf7a3e129118fea219fb",
 "assets/images/balsamiq.png": "ad6ac8fd0d099a0414dc5df9fc16904b",
-"assets/AssetManifest.json": "4370d9c26a28530cee05d2ca19a0f0aa",
-"assets/NOTICES": "b6012810bedeb91510656ec19e40c527",
+"assets/AssetManifest.json": "cc50130e63459d4c7c8c05d946b4b834",
+"assets/NOTICES": "8a345a7cb6bf00bcbb5095dc11174981",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/media/make-waves-2021-official.mp4": "924ffc65da50ebc6db73888723c11727"
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1"
 };
 
 // The application shell files that are downloaded before a service worker can
